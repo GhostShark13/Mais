@@ -1,0 +1,346 @@
+
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Registro de Usuários</title>
+</head>
+<body>
+
+  <style>
+    body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 20px;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+ul li {
+  float: left;
+}
+
+ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  background-color: #555;
+}
+
+#registration-form {
+  margin-bottom: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #333;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+p {
+  color: #666;
+}
+
+a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #2980b9;
+}
+  </style>
+
+
+  <ul>
+    <li><a href="Index.html">FitStyle Pro</a></li>
+    <li><a target="_blank" href="https://www.esgc.pt/portal/index.php">ESGC</a></li>
+    <li class="dropdown">
+    </li>
+  </ul>
+
+<div id="registration-form">
+  <form id="user-form">
+    <label for="name">Nome:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="lastname">Apelido:</label>
+    <input type="text" id="lastname" name="lastname" required>
+
+    <label for="birthdate">Data de Nascimento:</label>
+    <input type="date" id="birthdate" name="birthdate" required>
+    
+<label for="nationality">Nacionalidade:</label>
+<select id="nationality" name="nationality" required>
+  <!-- Adicione uma opção padrão -->
+  <option value="" disabled selected>Selecione a nacionalidade</option>
+  <!-- Lista de países europeus em português -->
+  <option value="Albânia">Albânia</option>
+  <option value="Andorra">Andorra</option>
+  <option value="Áustria">Áustria</option>
+  <option value="Bielorrússia">Bielorrússia</option>
+  <option value="Bélgica">Bélgica</option>
+  <option value="Bósnia e Herzegovina">Bósnia e Herzegovina</option>
+  <option value="Bulgária">Bulgária</option>
+  <option value="Croácia">Croácia</option>
+  <option value="Chipre">Chipre</option>
+  <option value="República Tcheca">República Tcheca</option>
+  <option value="Dinamarca">Dinamarca</option>
+  <option value="Estônia">Estônia</option>
+  <option value="Finlândia">Finlândia</option>
+  <option value="França">França</option>
+  <option value="Alemanha">Alemanha</option>
+  <option value="Grécia">Grécia</option>
+  <option value="Hungria">Hungria</option>
+  <option value="Islândia">Islândia</option>
+  <option value="Irlanda">Irlanda</option>
+  <option value="Itália">Itália</option>
+  <option value="Letônia">Letônia</option>
+  <option value="Liechtenstein">Liechtenstein</option>
+  <option value="Lituânia">Lituânia</option>
+  <option value="Luxemburgo">Luxemburgo</option>
+  <option value="Malta">Malta</option>
+  <option value="Moldávia">Moldávia</option>
+  <option value="Mônaco">Mônaco</option>
+  <option value="Montenegro">Montenegro</option>
+  <option value="Países Baixos">Países Baixos</option>
+  <option value="Macedônia do Norte">Macedônia do Norte</option>
+  <option value="Noruega">Noruega</option>
+  <option value="Polônia">Polônia</option>
+  <option value="Portugal">Portugal</option>
+  <option value="Romênia">Romênia</option>
+  <option value="Rússia">Rússia</option>
+  <option value="San Marino">San Marino</option>
+  <option value="Sérvia">Sérvia</option>
+  <option value="Eslováquia">Eslováquia</option>
+  <option value="Eslovênia">Eslovênia</option>
+  <option value="Espanha">Espanha</option>
+  <option value="Suécia">Suécia</option>
+  <option value="Suíça">Suíça</option>
+  <option value="Ucrânia">Ucrânia</option>
+  <option value="Reino Unido">Reino Unido</option>
+  <option value="Cidade do Vaticano">Cidade do Vaticano</option>
+  <option value="Algeria">Argélia</option>
+<option value="Angola">Angola</option>
+<option value="Benin">Benin</option>
+<option value="Botswana">Botsuana</option>
+<option value="Burkina Faso">Burkina Faso</option>
+<option value="Burundi">Burundi</option>
+<option value="Cabo Verde">Cabo Verde</option>
+<option value="Camarões">Camarões</option>
+<option value="Chade">Chade</option>
+<option value="Comores">Comores</option>
+<option value="Congo">Congo</option>
+<option value="Costa do Marfim">Costa do Marfim</option>
+<option value="Djibouti">Djibouti</option>
+<option value="Egito">Egito</option>
+<option value="Eritreia">Eritreia</option>
+<option value="Eswatini">Essuatíni</option>
+<option value="Etiópia">Etiópia</option>
+<option value="Gabão">Gabão</option>
+<option value="Gâmbia">Gâmbia</option>
+<option value="Gana">Gana</option>
+<option value="Guiné">Guiné</option>
+<option value="Guiné-Bissau">Guiné-Bissau</option>
+<option value="Lesoto">Lesoto</option>
+<option value="Libéria">Libéria</option>
+<option value="Líbia">Líbia</option>
+<option value="Madagáscar">Madagáscar</option>
+<option value="Malawi">Malawi</option>
+<option value="Mali">Mali</option>
+<option value="Marrocos">Marrocos</option>
+<option value="Mauritânia">Mauritânia</option>
+<option value="Maurícia">Maurícia</option>
+<option value="Moçambique">Moçambique</option>
+<option value="Namíbia">Namíbia</option>
+<option value="Níger">Níger</option>
+<option value="Nigéria">Nigéria</option>
+<option value="Quênia">Quênia</option>
+<option value="Ruanda">Ruanda</option>
+<option value="São Tomé e Príncipe">São Tomé e Príncipe</option>
+<option value="Senegal">Senegal</option>
+<option value="Seicheles">Seicheles</option>
+<option value="Serra Leoa">Serra Leoa</option>
+<option value="Somália">Somália</option>
+<option value="Sudão">Sudão</option>
+<option value="Sudão do Sul">Sudão do Sul</option>
+<option value="Tanzânia">Tanzânia</option>
+<option value="Togo">Togo</option>
+<option value="Tunísia">Tunísia</option>
+<option value="Uganda">Uganda</option>
+<option value="Zâmbia">Zâmbia</option>
+<option value="Zimbábue">Zimbábue</option>
+<option value="Afeganistão">Afeganistão</option>
+<option value="Arábia Saudita">Arábia Saudita</option>
+<option value="Armênia">Armênia</option>
+<option value="Azerbaijão">Azerbaijão</option>
+<option value="Bahrein">Bahrein</option>
+<option value="Bangladesh">Bangladesh</option>
+<option value="Brunei">Brunei</option>
+<option value="Butão">Butão</option>
+<option value="Camboja">Camboja</option>
+<option value="Cazaquistão">Cazaquistão</option>
+<option value="China">China</option>
+<option value="Coreia do Norte">Coreia do Norte</option>
+<option value="Coreia do Sul">Coreia do Sul</option>
+<option value="Emirados Árabes Unidos">Emirados Árabes Unidos</option>
+<option value="Filipinas">Filipinas</option>
+<option value="Geórgia">Geórgia</option>
+<option value="Iémen">Iémen</option>
+<option value="Índia">Índia</option>
+<option value="Indonésia">Indonésia</option>
+<option value="Irã">Irã</option>
+<option value="Iraque">Iraque</option>
+<option value="Israel">Israel</option>
+<option value="Japão">Japão</option>
+<option value="Jordânia">Jordânia</option>
+<option value="Kuwait">Kuwait</option>
+<option value="Laos">Laos</option>
+<option value="Líbano">Líbano</option>
+<option value="Malásia">Malásia</option>
+<option value="Maldivas">Maldivas</option>
+<option value="Mongólia">Mongólia</option>
+<option value="Myanmar (Birmânia)">Myanmar (Birmânia)</option>
+<option value="Nepal">Nepal</option>
+<option value="Omã">Omã</option>
+<option value="Paquistão">Paquistão</option>
+<option value="Qatar">Qatar</option>
+<option value="Quirguistão">Quirguistão</option>
+<option value="Singapura">Singapura</option>
+<option value="Síria">Síria</option>
+<option value="Sri Lanka">Sri Lanka</option>
+<option value="Tailândia">Tailândia</option>
+<option value="Taiwan">Taiwan</option>
+<option value="Tajiquistão">Tajiquistão</option>
+<option value="Timor-Leste">Timor-Leste</option>
+<option value="Turcomenistão">Turcomenistão</option>
+<option value="Turquia">Turquia</option>
+<option value="Uzbequistão">Uzbequistão</option>
+<option value="Vietnã">Vietnã</option>
+<option value="Palestina">Palestina</option>
+<option value="Argentina">Argentina</option>
+<option value="Bolívia">Bolívia</option>
+<option value="Brasil">Brasil</option>
+<option value="Chile">Chile</option>
+<option value="Colômbia">Colômbia</option>
+<option value="Equador">Equador</option>
+<option value="Guiana">Guiana</option>
+<option value="Paraguai">Paraguai</option>
+<option value="Peru">Peru</option>
+<option value="Suriname">Suriname</option>
+<option value="Uruguai">Uruguai</option>
+<option value="Venezuela">Venezuela</option>
+<option value="Belize">Belize</option>
+<option value="Costa Rica">Costa Rica</option>
+<option value="El Salvador">El Salvador</option>
+<option value="Guatemala">Guatemala</option>
+<option value="Honduras">Honduras</option>
+<option value="Nicarágua">Nicarágua</option>
+<option value="Panamá">Panamá</option>
+<option value="Canadá">Canadá</option>
+<option value="Estados Unidos">Estados Unidos</option>
+<option value="México">México</option>
+
+
+</select>
+
+
+
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="password">Senha:</label>
+    <input type="password" id="password" name="password" required>
+
+    <!-- Adicionando rótulo para o campo de gênero -->
+    <label for="gender">Gênero:</label>
+
+    <!-- Modificando a estrutura da seleção de gênero -->
+    <div>
+      <label for="male">Masculino</label>
+      <input type="radio" id="male" name="gender" value="male" required>
+
+      <label for="female">Feminino</label>
+      <input type="radio" id="female" name="gender" value="female" required>
+    </div>
+
+    <!-- Outras opções para gênero -->
+    <div>
+      <label for="other">Outro</label>
+      <input type="radio" id="other" name="gender" value="other" required>
+    </div>
+
+
+
+ <label for="phone">Número de Telefone:</label>
+      <input type="tel" id="phone" name="phone" pattern="\d{9}" title="O número de telefone deve ter exatamente 9 dígitos" required>
+
+    <label for="address">Morada:</label>
+    <input type="text" id="address" name="address" required>
+
+    <label for="postalCode">Código Postal:</label>
+    <input type="text" id="postalCode" name="postalCode" pattern="\d{4}-\d{3}" title="O Código Postal deve seguir o formato 1234-123" required>
+    <label for="nif">NIF:</label>
+    <input type="text" id="nif" name="nif" pattern="\d{9}" title="O NIF deve ter exatamente 9 números" required>
+
+    <button type="button" onclick="submitForm()">Registar</button>
+  </form>
+
+  <p>Já tem uma conta? <a href="Iniciar.html">Faça login aqui</a>.</p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+

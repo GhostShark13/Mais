@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolha de Gramas e Unidades</title>
+    <style>
+        body {
+            background-color: #1e1d1d52;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            text-align: left;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+        }
+
+        select,
+        input {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 15px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        img {
+            width: 100%;
+            max-width: 300px;
+            margin-right: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #warning {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <img src="Cacau.jpg" alt="Imagem Escolhida">
+
+        <form action="#" method="post" id="myForm">
+            <label for="quantidade">Quantidade:</label>
+            <select id="quantidade" name="quantidade" required onchange="updatePrice()">
+                <option value="500">500g</option>
+                <option value="1000">1kg</option>
+            </select>
+
+            <br>
+
+            <label for="unidades">Unidades:</label>
+            <input type="number" id="unidades" name="unidades" required onchange="updatePrice()">
+
+            <br>
+
+           
+            <input type="submit" value="Comprar">
+        </form>
+
+        <h1 id="price">Preço: €0.00</h1>
+
+       
+        <div id="warning"></div>
+
+    </div>
+
+    <script>
+        function updatePrice() {
+            var quantidadeSelect = document.getElementById('quantidade');
+            var unidadesInput = document.getElementById('unidades');
+            var priceDisplay = document.getElementById('price');
+            var warningMessage = document.getElementById('warning');
+
+            var quantidadeValue = parseFloat(quantidadeSelect.value);
+            var unidadesValue = parseFloat(unidadesInput.value);
+
+            
+            if (unidadesValue < 0) {
+                warningMessage.textContent = 'As unidades não podem ser negativas. Serão consideradas como 0.';
+                unidadesValue = 0;
+            } else {
+                warningMessage.textContent = '';
+            }
+
+            
+            var precoBasePor500Gramas = 17.00;
+            var precoPor500Gramas = precoBasePor500Gramas / 500;
+
+            var totalPrice = quantidadeValue * unidadesValue * precoPor500Gramas;
+
+            priceDisplay.textContent = 'Preço: €' + totalPrice.toFixed(2);
+        }
+    </script>
+</body>
+
+</html>
